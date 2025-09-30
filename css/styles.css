@@ -1,0 +1,18 @@
+body { background-color: #0b1220; }
+.bg-darker { background-color: #0f172a; } /* sección hero/habilidades */
+.text-light-strong { color: #e5e7eb; }
+.text-light-weak { color: #cbd5e1; }
+
+.hero-title { letter-spacing: .3px; }
+.hero-img { filter: drop-shadow(0 6px 20px rgba(0,0,0,.6)); }
+
+.card { transition: transform .15s ease, box-shadow .15s ease; }
+.card:hover { transform: translateY(-2px); box-shadow: 0 0.6rem 1.2rem rgba(0,0,0,.35); }
+.border-secondary { --bs-border-opacity: .5; }
+
+@media (max-width: 576px) {
+  .hero-title { font-size: 1.9rem; }
+}
+
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }

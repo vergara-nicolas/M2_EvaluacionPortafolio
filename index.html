@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portafolio | Nicolás Vergara</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous" defer></script>
+    <script src="js/script.js" defer></script>
+  </head>
+
+  <body class="bg-dark text-light">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top border-bottom border-secondary">
+        <div class="container">
+          <a class="navbar-brand fw-semibold" href="#">NV Portafolio</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+              <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="inicio" class="py-5 bg-darker border-bottom border-secondary">
+        <div class="container">
+          <div class="row align-items-center g-4">
+            <div class="col-12 col-md-7">
+              <h1 class="display-5 fw-bold hero-title text-white">Hola, soy Nicolás Vergara</h1>
+              <p class="lead text-light-strong">
+                Desarrollador en formación creando sitios y aplicaciones interactivas.
+              </p>
+              <a href="#proyectos" class="btn btn-primary btn-lg mt-2">Ver proyectos</a>
+            </div>
+            <div class="col-12 col-md-5 text-center">
+              <img src="assets/img.jpg" class="img-fluid hero-img" alt="Ilustración del portafolio" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="proyectos" class="py-5">
+        <div class="container">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="h3 m-0 text-white">Proyectos</h2>
+            <button id="btnAddProject" class="btn btn-outline-light">Agregar proyecto demo</button>
+          </div>
+
+          <div id="projectsRow" class="row g-4">
+            <article class="col-12 col-md-6 col-lg-4">
+              <div class="card text-bg-dark h-100 shadow-sm border-secondary">
+                <div class="card-body">
+                  <h3 class="h5 card-title text-white">Control de Riego Inteligente</h3>
+                  <p class="card-text text-light-strong">
+                    Sistema para monitorear y controlar riego con sensores de humedad y panel web.
+                  </p>
+                  <span class="badge text-bg-primary">HTML</span>
+                  <span class="badge text-bg-primary">CSS</span>
+                  <span class="badge text-bg-primary">JS</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section id="habilidades" class="py-5 bg-darker">
+        <div class="container">
+          <h2 class="h3 text-white">Habilidades</h2>
+          <div class="row">
+            <div class="col-md-6">
+              <ul class="list-group list-group-dark">
+                <li class="list-group-item bg-dark text-light border-secondary">HTML5 / CSS / JavaScript</li>
+                <li class="list-group-item bg-dark text-light border-secondary">Bootstrap</li>
+                <li class="list-group-item bg-dark text-light border-secondary">jQuery (dinámica DOM)</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul class="list-group list-group-dark">
+                <li class="list-group-item bg-dark text-light border-secondary">Git & GitHub</li>
+                <li class="list-group-item bg-dark text-light border-secondary">Node.js (básico)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contacto" class="py-5">
+        <div class="container">
+          <h2 class="h3 mb-3 text-white">Contacto</h2>
+
+          <div id="contactAlert" class="alert alert-success d-none" role="alert">
+            ¡Gracias! Tu mensaje fue recibido.
+          </div>
+
+          <form id="contactForm" class="row g-3">
+            <div class="col-md-6">
+              <label for="name" class="form-label">Nombre</label>
+              <input id="name" type="text" class="form-control" required />
+            </div>
+            <div class="col-md-6">
+              <label for="email" class="form-label">Email</label>
+              <input id="email" type="email" class="form-control" required />
+            </div>
+            <div class="col-12">
+              <label for="message" class="form-label">Mensaje</label>
+              <textarea id="message" class="form-control" rows="4" required></textarea>
+            </div>
+            <div class="col-12">
+              <button class="btn btn-primary" type="submit">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-4 border-top border-secondary">
+      <div class="container text-center small text-light-weak">
+        <span id="year"></span> Nicolás Vergara — <a class="link-light" href="mailto:nicolas.vsoto@gmail.com">nicolas.vsoto@gmail.com</a>
+      </div>
+    </footer>
+  </body>
+</html>
