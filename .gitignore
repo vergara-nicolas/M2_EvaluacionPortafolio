@@ -1,0 +1,15 @@
+# SO y editores
+.DS_Store
+thumbs.db
+.vscode/
+.idea/
+
+# Dependencias/compilados
+node_modules/
+dist/
+build/
+*.log
+
+# Archivos temporales
+*.tmp
+*.swp
